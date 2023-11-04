@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import ma.projet.entities.Filiere;
 import ma.projet.entities.Student;
 import ma.projet.service.StudentService;
 
@@ -28,11 +27,6 @@ public class StudentController {
 	@GetMapping
 	public List<Student> findAllStudent() {
 		return service.findAll();
-	}
-	
-	@GetMapping("/filieres")
-	public List<Student> findByFiliere(@RequestBody Filiere filiere) {
-		return service.finByFiliere(filiere);
 	}
 
 	@PostMapping
@@ -61,7 +55,7 @@ public class StudentController {
 			return ResponseEntity.ok(service.update(newStudent));
 		}
 	}
-	
+
 	@DeleteMapping("/{id}")
 	public ResponseEntity<Object> deleteStudent(@PathVariable int id) {
 		Student student = service.findById(id);
@@ -72,5 +66,5 @@ public class StudentController {
 			return ResponseEntity.ok("filière supprimée");
 		}
 	}
-	
+
 }

@@ -9,16 +9,25 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @SpringBootApplication
 @EntityScan(basePackages = "ma.projet.entities")
 @EnableJpaRepositories(basePackages = "ma.projet.repositories")
-@ComponentScan(basePackages = {"ma.projet.service", "ma.projet.controller"})
+@ComponentScan(basePackages = { "ma.projet.service", "ma.projet.controller" })
+//@Configuration
+//@EnableSwagger2
 public class School1Application {
 
 	public static void main(String[] args) {
 		SpringApplication.run(School1Application.class, args);
 	}
-	
-	public Docket apis() {
-		return new Docket( DocumentationType.SWAGGER_2 ).select().apis( RequestHandlerSelectors.basePackage("ma.projet.demo") ).build();
-	}
 
+//	@Bean
+//	public Docket apis() {
+//		return new Docket(DocumentationType.SWAGGER_2).select()
+//				.apis(RequestHandlerSelectors.basePackage("ma.projet.demo")).build();
+//	}
+
+//	@Bean
+//	public Docket api() {
+//		return new Docket(DocumentationType.SWAGGER_2).select().apis(RequestHandlerSelectors.any())
+//				.paths(PathSelectors.any()).build();
+//	}
 
 }
