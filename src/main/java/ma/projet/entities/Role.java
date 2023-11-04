@@ -2,6 +2,8 @@ package ma.projet.entities;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -10,13 +12,14 @@ import jakarta.persistence.ManyToMany;
 
 @Entity
 public class Role {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	private String name;
-	
-	@ManyToMany (mappedBy = "roles")
+
+	@ManyToMany(mappedBy = "roles")
+	@JsonIgnore
 	private List<User> users;
 
 	public Role() {
@@ -46,7 +49,5 @@ public class Role {
 	public void setUsers(List<User> users) {
 		this.users = users;
 	}
-	
 
-	
 }
