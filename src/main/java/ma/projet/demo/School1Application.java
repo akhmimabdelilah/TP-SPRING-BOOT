@@ -15,5 +15,10 @@ public class School1Application {
 	public static void main(String[] args) {
 		SpringApplication.run(School1Application.class, args);
 	}
+	
+	public Docket apis() {
+		return new Docket( DocumentationType.SWAGGER_2 ).select().apis( RequestHandlerSelectors.basePackage("ma.projet.demo") ).build();
+	}
+
 
 }

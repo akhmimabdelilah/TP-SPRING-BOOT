@@ -18,8 +18,13 @@ public class Role implements Serializable{
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	private String name;
+<<<<<<< HEAD
+
+	@ManyToMany(mappedBy = "roles")
+=======
 	
 	@ManyToMany (mappedBy = "roles")
+>>>>>>> c33a9e4797654683a99fd3f11195405fcd07125a
 	@JsonIgnore
 	private List<User> users;
 

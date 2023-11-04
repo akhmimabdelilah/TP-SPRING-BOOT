@@ -1,12 +1,10 @@
 package ma.projet.entities;
 
-import java.io.Serializable;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.ManyToOne;
 
 @Entity
-public class Student extends User implements Serializable {
+public class Student extends User {
 	
 	private String firstName;
 	private String lastName;
@@ -17,6 +15,7 @@ public class Student extends User implements Serializable {
 	public Student() {
 		super();
 	}
+	
 	public String getFirstName() {
 		return firstName;
 	}

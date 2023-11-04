@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import ma.projet.dao.IDao;
+import ma.projet.entities.Filiere;
 import ma.projet.entities.Role;
 import ma.projet.repositories.RoleRepository;
 @Service

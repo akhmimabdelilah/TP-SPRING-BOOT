@@ -6,20 +6,23 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import ma.projet.dao.IDao;
-import ma.projet.entities.Role;
-import ma.projet.repositories.RoleRepository;
+
+import ma.projet.entities.Filiere;
+import ma.projet.entities.Student;
+import ma.projet.repositories.StudentRepository;
 @Service
-public class RoleService implements IDao<Role>{
+public class StudentService implements IDao<Student>{
+
 	@Autowired
-	private RoleRepository repository;
+	private StudentRepository repository;
 
 	@Override
-	public Role create(Role o) {
+	public Student create(Student o) {
 		return repository.save(o);
 	}
 
 	@Override
-	public boolean delete(Role o) {
+	public boolean delete(Student o) {
 		try {
 			repository.delete(o);
 			return true;
@@ -29,19 +32,18 @@ public class RoleService implements IDao<Role>{
 	}
 
 	@Override
-	public Role update(Role o) {
+	public Student update(Student o) {
 		return repository.save(o);
 	}
 
 	@Override
-	public Role findById(int id) {
+	public Student findById(int id) {
 		return repository.findById(id).orElse(null);
 	}
 
 	@Override
-	public List<Role> findAll() {
+	public List<Student> findAll() {
 		return repository.findAll();
 	}
 
 }
-

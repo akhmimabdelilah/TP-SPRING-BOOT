@@ -30,8 +30,8 @@ public class RoleController {
 	}
 
 	@PostMapping
-	public Role createRole(@RequestBody Role role) {
-		role.setId(0);
+	public Role createRole(@PathVariable int id,@RequestBody Role role) {
+		role.setId(id);
 		return service.create(role);
 	}
 
