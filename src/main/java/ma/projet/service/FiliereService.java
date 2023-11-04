@@ -44,5 +44,7 @@ public class FiliereService implements IDao<Filiere> {
 	public List<Filiere> findAll() {
 		return repository.findAll();
 	}
+	
+	
 
 }
