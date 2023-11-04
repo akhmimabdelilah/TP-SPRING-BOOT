@@ -6,12 +6,20 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import ma.projet.dao.IDao;
+<<<<<<< HEAD
 import ma.projet.entities.Student;
 import ma.projet.repositories.StudentRepository;
 
 
 @Service
 public class StudentService implements IDao<Student> {
+=======
+import ma.projet.entities.Filiere;
+import ma.projet.entities.Student;
+import ma.projet.repositories.StudentRepository;
+@Service
+public class StudentService implements IDao<Student>{
+>>>>>>> c33a9e4797654683a99fd3f11195405fcd07125a
 	@Autowired
 	private StudentRepository repository;
 
@@ -46,3 +54,7 @@ public class StudentService implements IDao<Student> {
 	}
 
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> c33a9e4797654683a99fd3f11195405fcd07125a
