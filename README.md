@@ -1,5 +1,8 @@
 ## Projet Java Springboot de Gestion des Etudiants, Filieres et Role ##
 
+##La Conception
+![conception](./img/conception.png)
+
 - **Gestion des etudiant:**
 ![etudiant](./img/etudiant.png)
 
@@ -14,7 +17,8 @@
 
 - **Affichage des etudiants d'une filiere:**
 ![etufil](./img/etufil.png)
-  
+   
+
 ## les fonctionnalités implémentées
 1. les operations CRUD pour les deferentes entites
 2. Gestion des etudinants
@@ -25,11 +29,13 @@
 
   
 ##Les Technologies Utilisées
-+ SpringBoot
++ SpringBoot (Java Framework) 
 + JPA
-+ MySQL
-+ Rest Repositories
-+ Swagger
++ MySQL DB
++ Rest Repositories 
++ Swagger Doc
++ Maven
+
 
 "#SpringBoot Project" 
 
