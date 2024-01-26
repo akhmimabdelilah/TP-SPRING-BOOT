@@ -19,7 +19,7 @@ public class Role implements Serializable{
 	private int id;
 	private String name;
 	
-	@ManyToMany (mappedBy = "roles")
+	@ManyToMany (mappedBy = "role")
 	@JsonIgnore
 	private List<User> users;
 
